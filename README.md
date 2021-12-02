@@ -1,6 +1,6 @@
 # STM32 WS2812 LED Library
-C++ Library for interfacing the WS2812 LEDs with a STM32 like the STM32F103C8 (BLUEPILL) using SysTick
-
+C++ Library for interfacing the WS2812 LEDs with a STM32 like the STM32F103C8 (BLUEPILL) using SysTick.
+Disclaimer: This library is far from perfect and everything but efficient. It just works.
 # Installation
 Add the LED.cpp and the LED.hpp in your source / include folder
 
