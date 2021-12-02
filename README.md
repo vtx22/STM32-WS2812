@@ -29,11 +29,20 @@ Example: Using the animateSine function with htim2:
     The STM32F103C8T6 can run with 72MHz. Using a prescaler of 14400 - 1 yields a tick frequency of 5kHz. 
 2.  In the main, we call the animateSine function every 10 Timer ticks (=500Hz refresh rate) to increase the _updateCount
         
-        uint8_t color[3] = {128, 0, 0};
-        if(TIM2->CNT >= 10)
-	      {
-		        led._updateCNT++;
-		        TIM2->CNT = 0;
-		        led.animateSine(color, 0.02, 220, 0.8);
-	      }
+		uint8_t color[3] = {128, 0, 0};
+		if(TIM2->CNT >= 10)
+		{
+			led._updateCNT++;
+			TIM2->CNT = 0;
+			led.animateSine(color, 0.02, 220, 0.8);
+		}
     The following code should result in a red SineWave pattern on the LED strip.
+2.  Alternative: If your code allows it, you could simply increase the count in a loop with HAL_Delay
+	
+		uint8_t color[3] = {128, 0, 0};
+		while(1) 
+		{
+			led._updateCNT++;
+			led.animateSine(color, 0.02, 220, 0.8);
+			HAL_Delay(2);
+		}
