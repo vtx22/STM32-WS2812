@@ -5,6 +5,9 @@ Disclaimer: This library is far from perfect and everything but efficient. It ju
 Add the LED.cpp and the LED.hpp in your source / include folder
 
 # Basic Usage
+Before you start: The Library should work with any of the GPIO Pins. Make sure to initialize the GPIO that you want to use in GPIO FAST MODE. Moreover, set the
+internal clock frequency to 72MHz.
+
 To use the LED library follow the steps.
 
 1. Include the Library with 
