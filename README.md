@@ -2,7 +2,7 @@
 C++ Library for interfacing the WS2812 LEDs with a STM32 like the STM32F103C8 (BLUEPILL) using SysTick.
 Disclaimer: This library is far from perfect and everything but efficient. It just works.
 # Installation
-Add the LED.cpp and the LED.hpp in your source / include folder
+Add the LED.cpp and the LED.hpp to your source / include folder
 
 # Basic Usage
 Before you start: The Library should work with any of the GPIO Pins. Make sure to initialize the GPIO that you want to use in GPIO FAST MODE. Moreover, set the
